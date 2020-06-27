@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:zonionap/bottombar.dart';
 import 'package:zonionap/categories.dart';
+import 'package:zonionap/products.dart';
 //import 'package:zonionap/corousel.dart';
 import 'package:zonionap/title.dart';
 import 'commonscol.dart';
@@ -92,6 +93,7 @@ class _HomescreenState extends State<Homescreen> {
 
                ),
                 ),
+                Featuredadd(),
 
                
              
@@ -117,6 +119,12 @@ class _HomescreenState extends State<Homescreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Image.asset('image/user.png',width: 30,height: 30,),
+
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('image/pin.png',width: 30,height: 30,),
+
             ),
           ],
 

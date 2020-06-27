@@ -32,6 +32,11 @@ List<Category> categorieslist = [
     name: 'Cakes',
     image: 'birthday-cake.png'
   ),
+   Category(
+    name: 'Medicines',
+    image: 'capsules.png'
+   ),
+
 
 
 ];
