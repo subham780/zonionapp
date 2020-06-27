@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+//import 'package:zonionap/bottombar.dart';
 import 'package:zonionap/categories.dart';
 //import 'package:zonionap/corousel.dart';
 import 'package:zonionap/title.dart';
 import 'commonscol.dart';
+//import 'bottombar.dart';
 
 //import 'hlistview.dart';
 
@@ -75,7 +77,9 @@ class _HomescreenState extends State<Homescreen> {
 
               ), 
                Categories(),
+              // Bottombar(),
                Divider(),
+               
                 Padding(
                   
                   padding: const EdgeInsets.all(8.0),
@@ -94,8 +98,33 @@ class _HomescreenState extends State<Homescreen> {
           ],
 
         ),
+        
       ),
-      
+      bottomNavigationBar: Container(
+        height: 50,
+        color: Colors.teal.shade100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('image/home.png',width: 30,height: 30,),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('image/gift-bag.png',width: 30,height: 30,),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('image/user.png',width: 30,height: 30,),
+            ),
+          ],
+
+        ),
+
+      )
+
+    
     );
   }
 }
