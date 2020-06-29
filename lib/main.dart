@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zonionap/homes.dart';
+import 'package:zonionap/Screens/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,11 +11,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ZONION APP',
       theme: ThemeData(
-        
         primarySwatch: Colors.green,
       ),
       home: Homescreen(),
     );
   }
 }
-
