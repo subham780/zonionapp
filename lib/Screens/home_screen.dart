@@ -5,12 +5,13 @@ import 'package:zonionap/Utilities/customtext.dart';
 import 'package:zonionap/Utilities/constants.dart';
 import 'package:zonionap/Screens/partnerlist.dart';
 
-class Homescreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
+  static String id = "home_screen";
   @override
-  _HomescreenState createState() => _HomescreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomescreenState extends State<Homescreen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
