@@ -9,6 +9,21 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   String mobno;
+
+  Color borderColor = Colors.green;
+  bool phoneNumberValidation({String mobno}) {
+    //TODO: ADD more validations in future here
+    if (mobno != null && mobno.length == 10) {
+      borderColor = Colors.green;
+      return true;
+    } else {
+      setState(() {
+        borderColor = Colors.red;
+      });
+      return false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,11 +56,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.green, width: 1.0),
+                  borderSide: BorderSide(color: borderColor, width: 1.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.green, width: 2.0),
+                  borderSide: BorderSide(color: borderColor, width: 2.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
               ),
@@ -61,11 +76,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //print(mobno);
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return OtpValidateScreen(mobno: mobno);
-                    }));
+                    if (phoneNumberValidation(mobno: mobno)) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return OtpValidateScreen(mobno: mobno);
+                      }));
+                    }
                   },
                   minWidth: 200.0,
                   height: 42.0,

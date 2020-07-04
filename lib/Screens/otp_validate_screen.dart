@@ -4,7 +4,7 @@ import 'package:zonionap/Services/otp_service.dart';
 
 class OtpValidateScreen extends StatefulWidget {
   final String mobno;
-  OtpValidateScreen({this.mobno});
+  OtpValidateScreen({@required this.mobno});
   @override
   _OtpValidateScreenState createState() => _OtpValidateScreenState();
 }

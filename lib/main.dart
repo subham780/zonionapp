@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:zonionap/Screens/add_location_screen.dart';
 import 'package:zonionap/Screens/home_screen.dart';
 import 'package:zonionap/Screens/login_screen.dart';
+import 'package:zonionap/Screens/pick_and_drop_screen.dart';
 import 'package:zonionap/Screens/welcome_screen.dart';
+
+import 'Screens/search_address_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
+      home: WelcomeScreen(),
       initialRoute: WelcomeScreen.id,
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),

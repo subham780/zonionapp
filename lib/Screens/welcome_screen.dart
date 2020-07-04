@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zonionap/Screens/login_screen.dart';
+
+import 'add_location_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
@@ -8,25 +9,23 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  void getCurrentLocation() async {
-    await Future.delayed(Duration(seconds: 2));
-    Navigator.pushNamed(context, LoginScreen.id);
+  void waitFunction() async {
+    await new Future.delayed(new Duration(seconds: 4));
+
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return AddLocationScreen();
+    }));
   }
 
   @override
   Widget build(BuildContext context) {
-    getCurrentLocation();
+    waitFunction();
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Expanded(
-          child: Hero(
-            tag: 'logo',
-            child: Container(
-              child: Image(
-                image: AssetImage('image/zonion.jpg'),
-              ),
-            ),
+        child: Container(
+          child: Image(
+            image: AssetImage('image/zonion.jpg'),
           ),
         ),
       ),

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:zonionap/Utilities/constants.dart';
 
 class BottomNavBar extends StatelessWidget {
-  Widget getNavBarOptions({Icon materialIcon}) {
+  Widget getNavBarOptions({Widget child}) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: IconButton(
-            icon: materialIcon,
+            icon: child,
             onPressed: () {
               print('pressed bottom nav bar option');
             }),
@@ -23,10 +23,10 @@ class BottomNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          getNavBarOptions(materialIcon: Icon(Icons.home)),
-          getNavBarOptions(materialIcon: Icon(Icons.add_shopping_cart)),
-          getNavBarOptions(materialIcon: Icon(Icons.account_circle)),
-          getNavBarOptions(materialIcon: Icon(Icons.search)),
+          getNavBarOptions(child: Icon(Icons.home)),
+          getNavBarOptions(child: Icon(Icons.add_shopping_cart)),
+          getNavBarOptions(child: Icon(Icons.account_circle)),
+          getNavBarOptions(child: Icon(Icons.search)),
         ],
       ),
     );

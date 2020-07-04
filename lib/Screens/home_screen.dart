@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:zonionap/Screens/categories.dart';
 import 'package:zonionap/Screens/bottomnavbar.dart';
+import 'package:zonionap/Services/get_location.dart';
 import 'package:zonionap/Utilities/customtext.dart';
 import 'package:zonionap/Utilities/constants.dart';
 import 'package:zonionap/Screens/partnerlist.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = "home_screen";
+  final GetLocation locationObj;
+
+  const HomeScreen({this.locationObj});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }

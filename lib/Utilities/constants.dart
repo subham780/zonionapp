@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
+final kGoogleApiKey = "AIzaSyDD6dMxH31dAVoCPC8FioupJvOkb4kXQ00";
 const red = Colors.red;
 const white = Colors.white;
 const black = Colors.black;
 const grey = Colors.grey;
+
+const largeButtonTextStyle =
+    TextStyle(fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold);
 
 var boxDecoration = BoxDecoration(color: white, boxShadow: [
   BoxShadow(
@@ -12,7 +16,7 @@ var boxDecoration = BoxDecoration(color: white, boxShadow: [
     blurRadius: 4,
   ),
 ]);
-
+const activeCardColour = Color(0xFF1D1E33);
 var bottomNavBarDeco = BoxDecoration(color: white, boxShadow: [
   BoxShadow(
     color: red,
@@ -20,3 +24,6 @@ var bottomNavBarDeco = BoxDecoration(color: white, boxShadow: [
     blurRadius: 4,
   ),
 ]);
+
+const resultTextStyle = TextStyle(
+    fontSize: 20, color: Color(0xFF24D876), fontWeight: FontWeight.bold);
