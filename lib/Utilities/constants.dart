@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final kGoogleApiKey = "AIzaSyDD6dMxH31dAVoCPC8Fi";
+final kGoogleApiKey = "VoCPC8Fi";
 const red = Colors.red;
 const white = Colors.white;
 const black = Colors.black;
